@@ -12,13 +12,23 @@ Make sure you remove your ido-\* files from the features-enabled directory befor
 
 `docker run -v $yourbuildcopy:/etc/icinga2 doertedev/icinga2`
 
+So, this is it really. Let's assume you're like me and use gitlab-ci, create a shell job runner using the following config:
+
+```bash
+rm features-enabled/ido-* &> /dev/null
+docker run --rm -v $(pwd)/build:/etc/icinga2 doertedev/icinga2-ci:latest
+```
+
+Watch for upcoming releases/branches of this repo (or the equivalent [Docker registry hub repo](https://registry.hub.docker.com/u/doertedev/icinga2-ci/)). More versions of the icinga2 container are coming.
+
 ## Contribution
 
 As time passes by you might want to test your stuff against a version which is not being integrated yet. You know the drill: fork & PR.
 
-## Links
+## Links / Thanks
 
 * [Icinga](https://www.icinga.org)
+* [Gitlab-CI](https://about.gitlab.com/gitlab-ci/)
 
 ## License
 
