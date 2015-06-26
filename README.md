@@ -27,8 +27,9 @@ As time passes by you might want to test your stuff against a version which is n
 
 ## Links / Thanks
 
-* [Icinga](https://www.icinga.org)
-* [Gitlab-CI](https://about.gitlab.com/gitlab-ci/)
+* [Icinga](https://www.icinga.org) for being powerful.
+* [Gitlab-CI](https://about.gitlab.com/gitlab-ci/) for being simple.
+* [Jordan's icinga2 Dockerfile](https://registry.hub.docker.com/u/jordan/icinga2/dockerfile/) for providing a good working example of a full stack container.
 
 ## License
 
