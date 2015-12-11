@@ -35,13 +35,19 @@ sudo usermod -aG docker gitlab-runner
 ```
 ### Install Gitlab Runner
 Add Gitlab repository
-`curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-ci-multi-runner/script.deb.sh | sudo bash`
 
+```bash
+curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-ci-multi-runner/script.deb.sh | sudo bash
+```
 Install the runner software
-`apt-get install gitlab-ci-multi-runner`
+```bash
+apt-get install gitlab-ci-multi-runner
+```
 
 Configure gitlab-runner
-`sudo gitlab-ci-multi-runner register`
+```bash
+sudo gitlab-ci-multi-runner register
+```
 When prompted answer all the question.
 Make sure to select **shell**
 
