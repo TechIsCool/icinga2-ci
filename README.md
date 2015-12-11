@@ -37,7 +37,7 @@ sudo usermod -aG docker gitlab-runner
 
 Register your CI runner to the Job in GitLab
 
-Make sure to place [.gitlab-ci.yml](gitlab-ci.yml) in the root of your repository on GitLab
+Make sure to place [.gitlab-ci.yml](.gitlab-ci.yml) in the root of your repository on GitLab
 
 
 #### try commit some changes.
