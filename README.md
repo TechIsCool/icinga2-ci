@@ -35,9 +35,12 @@ To Allow gitlab-runner to Run Docker Containers run
 sudo usermod -aG docker gitlab-runner
 ```
 
-Register your CI runner to the Job in GitLAB
+Register your CI runner to the Job in GitLab
 
-try commit some changes.
+Make sure to place [.gitlab-ci.yml](gitlab-ci.yml) in the root of your repository on GitLab
+
+
+#### try commit some changes.
 
 
 ### If you want to run this manually without GitLab
