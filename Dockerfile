@@ -31,11 +31,11 @@ RUN apt-get -qq update \
 RUN wget --quiet -O - http://packages.icinga.org/icinga.key | apt-key add -
 
 # And included it so apt can query repo for packages.
-RUN echo "deb http://packages.icinga.org/debian icinga-wheezy-snapshots main" >> /etc/apt/sources.list
+RUN echo "deb http://packages.icinga.org/debian icinga-wheezy main" >> /etc/apt/sources.list
 
 # You could also provide a preferences.d / version pinning file here. But meh.
 RUN apt-get -qq update \
-    && apt-get -qqy install --no-install-recommends icinga2=2.3.5+snapshot2015.06.25+7~wheezy icinga2=2.3.5+snapshot2015.06.25+7~wheezy \
+    && apt-get -qqy install --no-install-recommends icinga2=2.4.1-1~debmon70+1 icinga2=2.4.1-1~debmon70+1 \
     && apt-get clean
 
 # Put your icinga2 config volume here.
