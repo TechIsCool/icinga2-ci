@@ -9,8 +9,11 @@ Therefore no web frontend is being installed, no IDO Database setup is being set
 ## Usage
 
 Make sure you remove your ido-\* files from the features-enabled directory before running the container, otherwise you'll get a build fail.
-
-`docker run -v $yourbuildcopy:/etc/icinga2 doertedev/icinga2`
+```bash
+yourbuildcopy=/home/doertedev/icinga2/build
+docker run -v $yourbuildcopy:/etc/icinga2 doertedev/icinga2
+```
+**Note:** The example above is for icinga2 while the example below is for icinga2-ci
 
 So, this is it really. Let's assume you're like me and use gitlab-ci, create a shell job runner using the following config:
 
@@ -21,6 +24,16 @@ docker run --rm -v $(pwd)/build:/etc/icinga2 doertedev/icinga2-ci:latest
 
 Watch for upcoming releases/branches of this repo (or the equivalent [Docker registry hub repo](https://registry.hub.docker.com/u/doertedev/icinga2-ci/)). More versions of the icinga2 container are coming.
 
+## Notes
+Copy the dockerfile to the machine where your docker server lives
+```bash
+docker build -t "doertedev:icinga2-ci" .
+```
+To Allow gitlab-runner to Run Docker Containers run
+```bash
+sudo usermod -aG docker gitlab-runner
+```
+Install
 ## Contribution
 
 As time passes by you might want to test your stuff against a version which is not being integrated yet. You know the drill: fork & PR.
