@@ -1,0 +1,4 @@
+validation:
+  script:
+    - rm features-enabled/ido-* &> /dev/null
+    - docker run --rm -v $(pwd)/build:/etc/icinga2 doertedev/icinga2-ci:latest
